@@ -22,6 +22,9 @@ var types = [
     [PIXI,          'ParticleContainer',require('./particle-container'),    'ParticleContainer'],
 
     [PIXI.extras,   'MovieClip',        require('./extras/movie-clip'),     'MovieClip'],
+
+    //FUEL UI ELEMENTS
+    [FUEL_UI,       'Button',           require('./ui/button'),             'FUEL UI/Button'],
 ];
 
 

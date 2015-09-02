@@ -34,6 +34,9 @@ if ( !Editor.isRuntime ) {
         Editor.inspectors['Runtime.ParticleContainerWrapper'] = 'app://runtime/runtime-pixi/share/inspector/particle-container-wrapper.html';
         Editor.inspectors['Runtime.MovieClipWrapper'] = 'app://runtime/runtime-pixi/share/inspector/movie-clip-wrapper.html';
 
+        // register FUEL UI inspector
+        Editor.inspectors['Runtime.ButtonWrapper'] = 'app://runtime/runtime-pixi/share/inspector/button-wrapper.html';
+
         // register property
         Editor.properties['Runtime.SpriteSheet'] = function ( fieldEL, info ) {
             return Editor.bindAsset( fieldEL, info.value, info.attrs, 'sprite-sheet' );
