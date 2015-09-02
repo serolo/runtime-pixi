@@ -34,11 +34,13 @@
     "scriptsDev": [
       "lib/pixi.js",
       "lib/pixi-spine.js",
+      "lib/fuel_ui.js",
       "bin/runtime-pixi.js"
     ],
     "scriptsMin": [
       "lib/pixi.min.js",
       "lib/pixi-spine.js",
+      "lib/fuel_ui.min.js",
       "bin/runtime-pixi.min.js"
     ]
   }
