@@ -51,7 +51,7 @@ var ButtonWrapper = Fire.Class({
             set: function (value) {
                 this.targetN.sprite.blendMode = value;
             },
-            type: Runtime.BLEND_MODES
+            type: Runtime.BlendModes
         },
 
         anchor: {
@@ -93,7 +93,7 @@ var ButtonWrapper = Fire.Class({
         },
 
         _blendMode: {
-            default: Runtime.BLEND_MODES.NORMAL
+            default: Runtime.BlendModes.NORMAL
         },
 
         _anchor: {
