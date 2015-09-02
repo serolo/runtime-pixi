@@ -6,6 +6,7 @@ if ( Editor.isCoreLevel || Editor.isRuntime ) {
 // meta and meta inspector
 [
     'sprite-sheet',
+    'video',
 ].forEach( function ( name ) {
 
     if ( !Editor.isRuntime ) {
@@ -38,11 +39,16 @@ if ( !Editor.isRuntime ) {
         // register FUEL UI inspector
         Editor.inspectors['Runtime.ButtonWrapper'] = 'app://runtime/runtime-pixi/share/inspector/button-wrapper.html';
 
-        // register property
+        // register asset property
         Editor.properties['Runtime.SpriteSheet'] = function ( fieldEL, info ) {
             return Editor.bindAsset( fieldEL, info.value, info.attrs, 'sprite-sheet' );
         };
 
+        Editor.properties['Runtime.VideoAsset'] = function ( fieldEL, info ) {
+            return Editor.bindAsset( fieldEL, info.value, info.attrs, 'video' );
+        };
+
+        // register node property
         Editor.properties['Runtime.DisplayObjectWrapper'] = function ( fieldEL, info ) {
             return Editor.bindNode( fieldEL, info.value, info.attrs, 'Runtime.DisplayObjectWrapper' );
         };
