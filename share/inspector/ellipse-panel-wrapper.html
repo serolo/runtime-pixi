@@ -2,7 +2,7 @@
 <link rel="import" href="packages://inspector/share/mixins-section.html">
 <link rel="import" href="display-object-section.html">
 
-<dom-module id="runtime-button-wrapper-inspector">
+<dom-module id="runtime-ellipse-panel-wrapper-inspector">
     <link rel="import" type="css" href="packages://inspector/share/common.css">
 
     <template>
@@ -15,10 +15,16 @@
             <inspector-runtime-display-object-section target="{{target}}">
             </inspector-runtime-display-object-section>
 
-            <editor-section text="Texture">
-                <editor-prop prop="{{target.normalTexture}}"></editor-prop>
-                <editor-prop prop="{{target.pressedTexture}}"></editor-prop>
-                <editor-prop prop="{{target.disabledTexture}}"></editor-prop>
+            <editor-section text="CustomProperty">
+                <editor-prop prop="{{target.edgeColor}}"></editor-prop>
+                <editor-prop prop="{{target.edgeWidth}}"></editor-prop>
+                <editor-prop prop="{{target.isButton}}"></editor-prop>
+                <editor-prop prop="{{target.pressColor}}"></editor-prop>
+                <editor-prop prop="{{target.showShadow}}"></editor-prop>
+                <editor-prop prop="{{target.shadowBlur}}"></editor-prop>
+                <editor-prop prop="{{target.shadowColor}}"></editor-prop>
+                <editor-prop prop="{{target.shadowX}}"></editor-prop>
+                <editor-prop prop="{{target.shadowY}}"></editor-prop>
             </editor-section>
 
             <editor-section text="BlendMode">
@@ -33,7 +39,7 @@
 
 <script>
     Polymer({
-        is: 'runtime-button-wrapper-inspector',
+        is: 'runtime-ellipse-panel-wrapper-inspector',
 
         properties: {
             target: {

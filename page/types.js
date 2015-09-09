@@ -28,3 +28,11 @@ Runtime.MeshDrawMode = Fire.defineEnum({
     TriangleMesh : PIXI.mesh.Mesh.DRAW_MODES.TRIANGLE_MESH,
     Triangles    : PIXI.mesh.Mesh.DRAW_MODES.TRIANGLES
 });
+
+Runtime.Borders = Fire.defineEnum({
+    NONE:       -1,
+    TOP :       -1,
+    BOTTOM :    -1,
+    LEFT:       -1,
+    RIGTH:      -1 
+});

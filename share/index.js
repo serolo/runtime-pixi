@@ -41,7 +41,11 @@ if ( !Editor.isRuntime ) {
         Editor.inspectors['Runtime.SpineWrapper'] = 'app://runtime/runtime-pixi/share/inspector/spine-wrapper.html';
 
         // register FUEL UI inspector
-        Editor.inspectors['Runtime.ButtonWrapper'] = 'app://runtime/runtime-pixi/share/inspector/button-wrapper.html';
+        Editor.inspectors['Runtime.ButtonImageWrapper'] = 'app://runtime/runtime-pixi/share/inspector/button-image-wrapper.html';
+        Editor.inspectors['Runtime.RectPanelWrapper'] = 'app://runtime/runtime-pixi/share/inspector/rect-panel-wrapper.html';
+        Editor.inspectors['Runtime.EllipsePanelWrapper'] = 'app://runtime/runtime-pixi/share/inspector/ellipse-panel-wrapper.html';
+        Editor.inspectors['Runtime.CirclePanelWrapper'] = 'app://runtime/runtime-pixi/share/inspector/circle-panel-wrapper.html';
+        Editor.inspectors['Runtime.RoundedRectPanelWrapper'] = 'app://runtime/runtime-pixi/share/inspector/rounded-rect-panel-wrapper.html';
 
         // register asset property
         Editor.properties['Runtime.SpriteSheet'] = function ( fieldEL, info ) {

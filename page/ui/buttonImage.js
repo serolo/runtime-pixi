@@ -1,9 +1,8 @@
 
 var ContainerWrapper = require('../container');
-var TextWrapper = require('../text');
 
-var ButtonWrapper = Fire.Class({
-    name: 'Runtime.ButtonWrapper',
+var ButtonImageWrapper = Fire.Class({
+    name: 'Runtime.ButtonImageWrapper',
     extends: ContainerWrapper,
 
     constructor: function () {
@@ -11,6 +10,15 @@ var ButtonWrapper = Fire.Class({
     },
 
     properties: {
+        childrenN: {
+            get: function () {
+                var targetN = this.targetN;
+                var children = targetN.children.filter(function (child) {
+                    return targetN.sprite !== child;
+                });
+                return children;
+            }
+        },
         normalTexture: {
             get: function () {
                 return this._normalTexture;
@@ -114,8 +122,7 @@ var ButtonWrapper = Fire.Class({
     },
 
     createNode: function (node) {
-
-        node = node || new FUEL_UI.Button();
+        node = node || new FUEL_UI.ButtonImage();
 
         ContainerWrapper.prototype.createNode.call(this, node);
 
@@ -142,4 +149,4 @@ var ButtonWrapper = Fire.Class({
     }
 });
 
-Runtime.ButtonWrapper = module.exports = ButtonWrapper;
+Runtime.ButtonImageWrapper = module.exports = ButtonImageWrapper;
